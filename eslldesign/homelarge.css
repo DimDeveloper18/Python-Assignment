@@ -1,0 +1,32 @@
+ /* Large screen size style configuration */
+ 
+        @media (min-width: 1440px){
+
+html{
+    font-size: 2em;
+}
+h1{
+    min-width: 15em;
+    padding-left: 5%;
+    /* font-size: 8em; */
+}
+nav{
+    height: 50px;
+}
+#fcontimg{
+    min-height: 20vw;
+}
+#hmaimg1{
+    min-width: 20vw;
+    min-height: 20vw;
+}
+#hmaimg2{
+    min-width: 20vw;
+    min-height: 20vw;
+}
+#hmaimg3{
+    margin-top: 35px;
+    min-width: 20vw;
+    min-height: 20vw;
+}
+}

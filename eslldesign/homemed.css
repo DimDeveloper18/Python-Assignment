@@ -1,0 +1,33 @@
+/* Medium screen size style configuration */
+
+        @media (min-width: 768px) {
+
+header{
+    gap: 150px;
+}
+#logo{
+    min-height: 80%;
+}
+nav{
+    height: 30px;
+    border: 2px solid #000000;
+    border-bottom-right-radius: 500px 50px;
+    padding-top: 5px;
+}
+nav a:link{
+    padding: 7px;
+}
+#hmp1{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+#fcontimg{
+    min-width: 25%;
+}
+#hmart{
+    display: flex;
+    align-items: stretch;
+    gap: 40px;
+}
+}

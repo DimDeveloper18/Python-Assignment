@@ -23,7 +23,7 @@ nav a:link{
     gap: 50px;
 }
 #fcontimg{
-    min-width: 25%;
+    min-width: 30vw;
 }
 #hmart{
     display: flex;

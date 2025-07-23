@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block main %}
+    <div>
+        <section>
+            <h2>Food control</h2>
+            <div id="hmp1">
+                <p>
+                    Food and its management are directly linked to our health. In today's fast-paced lives, people 
+                    tend to consume more calories than their bodies require. These excess calories are stored as 
+                    body fat. If this pattern continues over time, it may lead to weight gain. When we gain weight, 
+                    this can lead to additional health complications. Therefore, it is essential to monitor our 
+                    intake of food and drink, as well as the quantities we consume. To assist you in this process, 
+                    we have developed a calorie calculator that will allow you to accurately calculate your daily 
+                    calorie intake for each meal. This will allow you to adjust your diet accordingly, whether your 
+                    goal is to lose weight or merely maintain good health through proper nutrition.
+                </p>
+                <img id="fcontimg" src="{{ url_for('static', filename='images/vegi4.jpg')}}" alt="Healthy Plate" width="150" height="150">
+            </div>
+        </section>
+        <article>
+            <h2>Important food to our health</h2>
+            <div id="hmart">
+                <section>
+                    <h3>Vegetables</h3>
+                    <p>
+                        The benefits of vegetables and fruit are priceless. Vegetables aren't just food - they're 
+                        vitamins, minerals, and fibers that ensure a healthy body. They provide energy, protect 
+                        against disease, and simply bring gastronomic pleasure to a person.
+                    </p>
+                    <img id="hmaimg1" src="{{ url_for('static', filename='images/vegi2.jpg')}}" alt="Healthy Plate" width="150" height="150">
+                </section>
+                <section>
+                    <h3>Meats</h3>
+                    <p>
+                        Meat contains essential nutrients that are beneficial for human health. It is a rich source 
+                        of protein, vitamins, and minerals, which strengthen the immune system and promote overall 
+                        body development. Meat consumption can help increase hemoglobin levels, alleviate skin 
+                        conditions, and provide sustained energy.
+                    </p>
+                    <img id="hmaimg2" src="{{ url_for('static', filename='images/meat2.jpg')}}" alt="Healthy Plate" width="150" height="150">
+                </section>
+                <section>
+                    <h3>Grains</h3>
+                    <p>
+                        Wheat, rice, oats and corn are all types of grains. Bread, breakfast cereals, pasta and rice 
+                        are all made from these grains. These grains are rich in complex carbohydrates, which provide 
+                        the brain, heart and nervous system with a steady supply of energy, allowing the body to move, 
+                        breathe and think. In addition, these grain products contain vitamins B and iron, which are 
+                        essential for good health.
+                    </p>
+                    <img id="hmaimg3" src="{{ url_for('static', filename='images/grain1.jpg')}}" alt="Healthy Plate" width="150" height="150">
+                </section>
+            </div>
+        </article>
+    </div>
+{% endblock %}
+        

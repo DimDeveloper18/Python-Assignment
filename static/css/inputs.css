@@ -1,0 +1,10 @@
+#choose_form{
+    display: flex;
+    width: 260px;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+}
+.lum{
+    border: 2px solid #ffff00;
+}

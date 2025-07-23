@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESLL</title>
+    <link href="{{ url_for('static', filename='css/homemobile.css')}}" rel="stylesheet">
+    <link rel="icon" href="{{ url_for('static', filename='images/esll_logo2.png')}}">
+    {% block css %}
+    {% endblock %}
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <img id="logo" src="{{ url_for('static', filename='images/esll_logo2.png')}}" alt="Healthy Plate" width="150" height="100">
+            <h1>Eat Smart Live Longer</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index')}}">Home</a></li>
+                <li><a href="{{ url_for('veg_page')}}">Vegetables</a></li>
+                <li><a href="{{ url_for('meat_page')}}">Meats</a></li>
+                <li><a href="{{ url_for('grains_page')}}">Grains</a></li>
+            </ul>
+        </nav>
+        <main>
+            {% block main %}
+            {% endblock %}
+        </main>
+        <footer>Copyright &copy; 2025 ESLL - All rights reserved</footer>
+    </div>
+</body>
+</html>

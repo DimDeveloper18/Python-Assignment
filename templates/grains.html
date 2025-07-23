@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block main %}
+    <div>
+    <section>
+        <h2>Grains</h2>
+        <p>
+            Barley, Bulgur, Farro, Millet, Quinoa, Black rice, Brown rice, Red rice, 
+            Wild rice, Oatmeal, Popcorn, Whole-wheat flour, Whole-grain cereals, 
+            Whole-wheat bread, Pasta, or Crackers.
+        </p>
+    </section>
+    <article>
+        <h2>A wide variety of grains, with great flavor.</h2>
+        <p>
+            <h3>What do you have today?</h3>
+            <form method="get">
+                <label for="piked-grain">Pick your vegetable</label>
+                <input type="text" name="grain" id="grain" list="grains">
+                <datalist id="grains">
+                    <option value="Barley" label="Barley"></option>
+                    <option value="Bulgur" label="Bulgur"></option>
+                    <option value="Farro" label="Farro"></option>
+                    <option value="Millet" label="Millet"></option>
+                    <option value="Quinoa" label="Quinoa"></option>
+                    <option value="Black rice" label="Black rice"></option>
+                    <option value="Red rice" label="Red rice"></option>
+                    <option value="Wild rice" label="Wild rice"></option>
+                    <option value="Oatmeal" label="Oatmeal"></option>
+                    <option value="Popcorn" label="Popcorn"></option>
+                    <option value="Whole-wheat flour" label="Whole-wheat flour"></option>
+                    <option value="Whole-grain cereals" label="Whole-grain cereals"></option>
+                    <option value="Whole-wheat bread" label="Whole-wheat bread"></option>
+                    <option value="Pasta" label="Pasta"></option>
+                    <option value="Crackers" label="Crackers"></option>
+                </datalist>&nbsp;
+                <label for="gramms_select">Select the amount</label>
+                <input type="text" name="gramm" id="grain_gramm" list="gramms">
+                <datalist id="gramms">
+                    <option value="30" label="g"></option>
+                    <option value="50" label="g"></option>
+                    <option value="100" label="g"></option>
+                    <option value="150" label="g"></option>
+                    <option value="" label=""></option>
+                </datalist>
+                <input type="submit"/> <input type="reset"/>
+                <label for="grain_cal">Calories total</label>
+                <output name="calories" for="grain gramm"></output>
+            </form>
+        </p>
+    </article>
+    </div>
+{% endblock %}

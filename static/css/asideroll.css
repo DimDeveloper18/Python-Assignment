@@ -1,11 +1,10 @@
+@media screen and (min-width: 320px){
 .roll{
     max-width: 300px;
     justify-self: center;
 }
 .roll[data-animated="true"]{
     overflow: hidden;
-    /* border: 3px solid #000000;
-    border-radius: 10px; */
     -webkit-mask: linear-gradient(90deg, transparent, #ffffff 20%, #ffffff 80%, transparent);
     mask: linear-gradient(90deg, transparent, #ffffff 20%, #ffffff 80%, transparent);
 }
@@ -17,12 +16,39 @@
 .inroll{
     display: flex;
     gap: 1rem;
-    /* border: 3px solid #000000; */
     padding-block: 1rem;
     flex-wrap: wrap;
 }
 @keyframes scroll {
     to {
-        transform: translate(calc(-50% - 0.5rem));
+        transform: translateX(calc(-50% - 0.5rem));
     }
+}
+}
+
+@media screen and (min-width: 768px){
+
+.roll[data-animated="true"]{
+    overflow: hidden;
+    -webkit-mask: linear-gradient(top, transparent, #ffffff 20%, #ffffff 80%, transparent);
+    mask: linear-gradient(bottom, transparent, #ffffff 20%, #ffffff 80%, transparent);
+}
+.roll[data-animated="true"] .inroll{
+    flex-wrap: wrap;
+    animation: scroll 20s linear infinite;
+    height: max-content;
+}
+.inroll{
+    display: block;
+    max-width: 50px;
+    max-height: 500px;
+    gap: 1rem;
+    padding-block: 1rem;
+    flex-wrap: nowrap;
+}
+@keyframes scroll {
+    from {
+        transform: translateY(calc(-50% - 0.5rem));
+    }
+}
 }

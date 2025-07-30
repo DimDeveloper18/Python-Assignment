@@ -25,7 +25,7 @@
             <h3>What do you have today?</h3>
             <form id="choose_form" method="get">
                 <label for="piked-vegi">Pick your vegetable</label>
-                <input type="text" name="vegetable" id="vegetable" list="vegetables">
+                <input type="text" name="vegetable" id="vegetable" list="vegetables" placeholder="Pick your vegetable">
                 <datalist id="vegetables">
                     <option value="Avocado" label="Avocado"></option>
                     <option value="Artichoke" label="Artichoke"></option>
@@ -45,17 +45,17 @@
                     <option value="" label=""></option>
                 </datalist>&nbsp;
                 <label for="gramms_select">Select the amount</label>
-                <input type="text" name="gramm" id="veg_gramm" list="gramms">
+                <input type="text" name="gramm" id="veg_gramm" list="gramms" placeholder="Pick size in gramms">
                 <datalist id="gramms">
                     <option value="30" label="g"></option>
                     <option value="50" label="g"></option>
                     <option value="100" label="g"></option>
                     <option value="150" label="g"></option>
                     <option value="" label=""></option>
-                </datalist>
-                <input type="submit"/> <input type="reset"/>
+                </datalist>&nbsp;
+                <input type="submit"/>&nbsp; <input type="reset"/>
                 <label for="veg_cal">Calories total</label>
-                <output name="calories" for="vegetable gramm"></output>
+                <output id="calories" name="calories" for="vegetable gramm"></output>
             </form>
         </p>
     </article>

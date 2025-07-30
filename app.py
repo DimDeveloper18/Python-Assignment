@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -18,3 +18,7 @@ def meat_page():
 @app.route("/grains")
 def grains_page():
     return render_template("grains.html")
+
+@app.route("/contact")
+def contact_page():
+    return render_template("contact.html")

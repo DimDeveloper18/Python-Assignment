@@ -59,6 +59,14 @@
             </form>
         </p>
     </article>
+    <article>
+        <h4>Create your plate</h4>
+        <form action="{{ url_for("add_to_plate")}}" method="POST">
+            <input id="item" type="text" name="item" placeholder="Add vegetable to your plate">
+            <button type="submit"> Add </button>
+            <button type="submit"><a href="{{url_for('plate_list')}}">View plate</a></button>
+        </form>
+    </article>
     <script src="{{ url_for('static', filename='js/inputs.js')}}"></script>
     </div>
 {% endblock %}

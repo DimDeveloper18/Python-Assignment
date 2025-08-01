@@ -8,6 +8,8 @@ meat_cal_table = {"Pork": 3, "Beef": 2.5, "Veal": 1.8, "Mutton": 1.5, "Lamb": 3,
 
 grain_cal_table = {"Barley": 0.3, "Bulgur": 1.5, "Farro": 1.8, "Millet": 1.5, "Quinoa": 0.3, "Black rice": 0.8, "Red rice": 0.4, "Wild rice": 1.4, "Oatmeal": 0.7, "Popcorn": 1.8, "Whole-wheat flour": 1, "Whole-grain cereals": 2.3, "Whole-wheat bread": 2.1, "Pasta": 2.5, "Crackers": 1.8,}
 
+items = [""]
+
 @app.route("/")
 @app.route("/index")
 def index():
@@ -24,6 +26,17 @@ def veg_page():
     else:
         veg_cal_total = "Invalid input"
     return render_template("vegetables.html", calories=veg_cal_total)
+
+@app.route("/vegetables", methods=["GET"])
+def add_to_plate_get():
+    return render_template("vegetables.html")
+
+@app.route("/vegetables", methods=["POST"])
+def add_to_plate():
+    item = request.form.get(item)
+    items.append(item)
+    print(items)
+    return render_template("vegetables.html")
 
 @app.route("/meat", methods=["GET", "POST"])
 def meat_page():
@@ -48,6 +61,10 @@ def grains_page():
     else:
         grain_cal_total = "Invalid input"
     return render_template("grains.html", calories=grain_cal_total)
+
+@app.route("/plate")
+def plate_list():
+    return render_template("plate.html", items=items)
 
 @app.route("/contact")
 def contact_page():

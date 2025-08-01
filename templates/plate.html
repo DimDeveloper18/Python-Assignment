@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block css %}
+<link href="{{ url_for('static', filename='css/asideroll.css')}}" rel="stylesheet">
+{% endblock %}
+{% block main %}
+    <article>
+        <h4>Create your plate</h4>
+        <ul>
+            {% for item in items %}
+            <li> {{ item }} </li>
+            {% endfor %}
+        </ul>
+    </article>
+{% endblock %}

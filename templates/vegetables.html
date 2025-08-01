@@ -23,7 +23,7 @@
         <h2>A wide variety of vegetables and fruits, with great flavor.</h2>
         <p>
             <h3>What do you have today?</h3>
-            <form id="choose_form" method="get">
+            <form id="choose_form" method="POST">
                 <label for="piked-vegi">Pick your vegetable</label>
                 <input type="text" name="vegetable" id="vegetable" list="vegetables" placeholder="Vegetables">
                 <datalist id="vegetables">
@@ -45,7 +45,7 @@
                     <option value="" label=""></option>
                 </datalist>&nbsp;
                 <label for="gramms_select">Select the amount</label>
-                <input type="text" name="gramm" id="veg_gramm" list="gramms" placeholder="Gramms">
+                <input type="text" name="gramm" id="veg_gramm" list="gramms" placeholder="Grams">
                 <datalist id="gramms">
                     <option value="30" label="g"></option>
                     <option value="50" label="g"></option>
@@ -55,7 +55,7 @@
                 </datalist>&nbsp;
                 <input type="submit"/>&nbsp; <input type="reset"/>&nbsp;
                 <label for="veg_cal">Calories total</label>
-                <output id="calories" name="calories" for="vegetable gramm"></output>
+                <output id="calories" name="calories">{{ calories }}</output>
             </form>
         </p>
     </article>

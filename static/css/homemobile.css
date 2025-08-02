@@ -2,9 +2,7 @@
 @import url("homelarge.css");
 
 @media screen and (min-width: 320px){
-/* html{
-    font-size: 1em;
-} */
+
 body{
     background-color: #ffc18a;
     color: #000000;
@@ -68,6 +66,9 @@ nav a:active{
 main{
     text-align: center;
     margin: 0px 10px 0px 10px;
+}
+aside{
+    display: none;
 }
 footer{
     text-align: center;

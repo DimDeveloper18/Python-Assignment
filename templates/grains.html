@@ -14,53 +14,62 @@
             Whole-wheat bread, Pasta, or Crackers.
         </p>
     </section>
-    <article>
-        <h2>A wide variety of grains, with great flavor.</h2>
-        <p>
-            <h3>What do you have today?</h3>
-            <form id="choose_form" method="POST">
-                <label for="piked-grain">Pick your grain</label>
-                <input type="text" name="grain" id="grain" list="grains" placeholder="Grains">
-                <datalist id="grains">
-                    <option value="Barley" label="Barley"></option>
-                    <option value="Bulgur" label="Bulgur"></option>
-                    <option value="Farro" label="Farro"></option>
-                    <option value="Millet" label="Millet"></option>
-                    <option value="Quinoa" label="Quinoa"></option>
-                    <option value="Black rice" label="Black rice"></option>
-                    <option value="Red rice" label="Red rice"></option>
-                    <option value="Wild rice" label="Wild rice"></option>
-                    <option value="Oatmeal" label="Oatmeal"></option>
-                    <option value="Popcorn" label="Popcorn"></option>
-                    <option value="Whole-wheat flour" label="Whole-wheat flour"></option>
-                    <option value="Whole-grain cereals" label="Whole-grain cereals"></option>
-                    <option value="Whole-wheat bread" label="Whole-wheat bread"></option>
-                    <option value="Pasta" label="Pasta"></option>
-                    <option value="Crackers" label="Crackers"></option>
-                </datalist>&nbsp;
-                <label for="gramms_select">Select the amount</label>
-                <input type="text" name="gramm" id="grain_gramm" list="gramms" placeholder="Grams">
-                <datalist id="gramms">
-                    <option value="30" label="g"></option>
-                    <option value="50" label="g"></option>
-                    <option value="100" label="g"></option>
-                    <option value="150" label="g"></option>
-                    <option value="" label=""></option>
-                </datalist>&nbsp;
-                <input type="submit"/>&nbsp; <input type="reset"/>&nbsp;
-                <label for="grain_cal">Calories total</label>
-                <output name="calories">{{ calories }}</output>
-            </form>
-        </p>
-    </article>
-    <article>
-        <h4>Create your plate</h4>
-        <form id="set_plate" action="{{ url_for("add_to_plate")}}" method="POST">
-            <input id="item" type="text" name="item" placeholder="Add grain to your plate">&nbsp;
-            <button type="submit"> Add </button><br>
-            <button type="submit"><a href="{{url_for('plate_list')}}">View plate</a></button>
-        </form>
-    </article>
+        <div id="main_artic">
+            <article id="artic1">
+                <h2>A wide variety of grains, with great flavor.</h2>
+                <p>
+                    <h3>What do you have today?</h3>
+                    <div id="form_sec">
+                        <form id="choose_form" method="POST">
+                            <label for="piked-grain">Pick your grain</label>
+                            <input type="text" name="grain" id="grain" list="grains" placeholder="Grains">
+                            <datalist id="grains">
+                                <option value="Barley" label="Barley"></option>
+                                <option value="Bulgur" label="Bulgur"></option>
+                                <option value="Farro" label="Farro"></option>
+                                <option value="Millet" label="Millet"></option>
+                                <option value="Quinoa" label="Quinoa"></option>
+                                <option value="Black rice" label="Black rice"></option>
+                                <option value="Red rice" label="Red rice"></option>
+                                <option value="Wild rice" label="Wild rice"></option>
+                                <option value="Oatmeal" label="Oatmeal"></option>
+                                <option value="Popcorn" label="Popcorn"></option>
+                                <option value="Whole-wheat flour" label="Whole-wheat flour"></option>
+                                <option value="Whole-grain cereals" label="Whole-grain cereals"></option>
+                                <option value="Whole-wheat bread" label="Whole-wheat bread"></option>
+                                <option value="Pasta" label="Pasta"></option>
+                                <option value="Crackers" label="Crackers"></option>
+                            </datalist>&nbsp;
+                            <label for="gramms_select">Select the amount</label>
+                            <input type="text" name="gramm" id="grain_gramm" list="gramms" placeholder="Grams">
+                            <datalist id="gramms">
+                                <option value="30" label="g"></option>
+                                <option value="50" label="g"></option>
+                                <option value="100" label="g"></option>
+                                <option value="150" label="g"></option>
+                                <option value="" label=""></option>
+                            </datalist>&nbsp;
+                            <input type="submit"/>&nbsp; <input type="reset"/>&nbsp;
+                            <label for="grain_cal">Calories total</label>
+                            <output name="calories">{{ calories }}</output>
+                        </form>
+                        <div id="artic_pics">
+                            <img id="hmaimg2" src="{{ url_for('static', filename='images/grain4.jpg')}}" alt="Healthy Plate" width="250" height="150">
+                            <img id="hmaimg2" src="{{ url_for('static', filename='images/grain5.jpg')}}" alt="Healthy Plate" width="250" height="150">
+                            <img id="hmaimg2" src="{{ url_for('static', filename='images/grain2.jpg')}}" alt="Healthy Plate" width="250" height="150">
+                            </div>
+                        </div>
+                </p>
+            </article>
+            <article>
+                <h4>Create your plate</h4>
+                <form id="set_plate" action="{{ url_for("add_to_plate")}}" method="POST">
+                    <input id="item" type="text" name="item" placeholder="Add grain to your plate">&nbsp;
+                    <button type="submit"> Add </button><br>
+                    <button type="submit"><a href="{{url_for('plate_list')}}">View plate</a></button>
+                </form>
+            </article>
+        </div>
     <script src="{{ url_for('static', filename='js/gpinputs.js')}}"></script>
     </div>
 {% endblock %}

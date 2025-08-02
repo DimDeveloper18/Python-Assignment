@@ -2,6 +2,7 @@
 {% block css %}
 <link href="{{ url_for('static', filename='css/inputs.css')}}" rel="stylesheet">
 <link href="{{ url_for('static', filename='css/asideroll.css')}}" rel="stylesheet">
+<link href="{{ url_for('static', filename='css/vegetables.css')}}" rel="stylesheet">
 {% endblock %}
 {% block main %}
     <div>
@@ -19,54 +20,63 @@
             Zucchini.
         </p>
     </section>
-    <article>
-        <h2>A wide variety of vegetables and fruits, with great flavor.</h2>
-        <p>
-            <h3>What do you have today?</h3>
-            <form id="choose_form" method="POST">
-                <label for="piked-vegi">Pick your vegetable</label>
-                <input type="text" name="vegetable" id="vegetable" list="vegetables" placeholder="Vegetables">
-                <datalist id="vegetables">
-                    <option value="Avocado" label="Avocado"></option>
-                    <option value="Artichoke" label="Artichoke"></option>
-                    <option value="Asian greens" label="Asian greens"></option>
-                    <option value="Asparagus" label="Asparagus"></option>
-                    <option value="Beetroot" label="Beetroot"></option>
-                    <option value="Broad beans" label="Broad beans"></option>
-                    <option value="Broccoli" label="Broccoli"></option>
-                    <option value="Broccolini" label="Broccolini"></option>
-                    <option value="Brussel sprouts" label="Brussel sprouts"></option>
-                    <option value="Butternut pumpkin" label="Butternut pumpkin"></option>
-                    <option value="Cabbage" label="Cabbage"></option>
-                    <option value="Capsicum" label="Capsicum"></option>
-                    <option value="Carrot" label="Carrot"></option>
-                    <option value="Cauliflower" label="Cauliflower"></option>
-                    <option value="Celery" label="Celery"></option>
-                    <option value="" label=""></option>
-                </datalist>&nbsp;
-                <label for="gramms_select">Select the amount</label>
-                <input type="text" name="gramm" id="veg_gramm" list="gramms" placeholder="Grams">
-                <datalist id="gramms">
-                    <option value="30" label="g"></option>
-                    <option value="50" label="g"></option>
-                    <option value="100" label="g"></option>
-                    <option value="150" label="g"></option>
-                    <option value="" label=""></option>
-                </datalist>&nbsp;
-                <input type="submit"/>&nbsp; <input type="reset"/>&nbsp;
-                <label for="veg_cal">Calories total</label>
-                <output id="calories" name="calories">{{ calories }}</output>
-            </form>
-        </p>
-    </article>
-    <article>
-        <h4>Create your plate</h4>
-        <form action="{{ url_for("add_to_plate")}}" method="POST">
-            <input id="item" type="text" name="item" placeholder="Add vegetable to your plate">
-            <button type="submit"> Add </button>
-            <button type="submit"><a href="{{url_for('plate_list')}}">View plate</a></button>
-        </form>
-    </article>
+        <div id="main_artic">
+            <article id="artic1">
+                <h2>A wide variety of vegetables and fruits, with great flavor.</h2>
+                <p>
+                    <h3>What do you have today?</h3>
+                    <div id="form_sec">
+                            <form id="choose_form" method="POST">
+                                <label for="piked-vegi">Pick your vegetable</label>
+                                <input type="text" name="vegetable" id="vegetable" list="vegetables" placeholder="Vegetables">
+                                <datalist id="vegetables">
+                                    <option value="Avocado" label="Avocado"></option>
+                                    <option value="Artichoke" label="Artichoke"></option>
+                                    <option value="Asian greens" label="Asian greens"></option>
+                                    <option value="Asparagus" label="Asparagus"></option>
+                                    <option value="Beetroot" label="Beetroot"></option>
+                                    <option value="Broad beans" label="Broad beans"></option>
+                                    <option value="Broccoli" label="Broccoli"></option>
+                                    <option value="Broccolini" label="Broccolini"></option>
+                                    <option value="Brussel sprouts" label="Brussel sprouts"></option>
+                                    <option value="Butternut pumpkin" label="Butternut pumpkin"></option>
+                                    <option value="Cabbage" label="Cabbage"></option>
+                                    <option value="Capsicum" label="Capsicum"></option>
+                                    <option value="Carrot" label="Carrot"></option>
+                                    <option value="Cauliflower" label="Cauliflower"></option>
+                                    <option value="Celery" label="Celery"></option>
+                                    <option value="" label=""></option>
+                                </datalist>&nbsp;
+                                <label for="gramms_select">Select the amount</label>
+                                <input type="text" name="gramm" id="veg_gramm" list="gramms" placeholder="Grams">
+                                <datalist id="gramms">
+                                    <option value="30" label="g"></option>
+                                    <option value="50" label="g"></option>
+                                    <option value="100" label="g"></option>
+                                    <option value="150" label="g"></option>
+                                    <option value="" label=""></option>
+                                </datalist>&nbsp;
+                                <input type="submit"/>&nbsp; <input type="reset"/>&nbsp;
+                                <label for="veg_cal">Calories total</label>
+                                <output id="calories" name="calories">{{ calories }}</output>
+                            </form>
+                            <div id="artic_pics">
+                            <img id="hmaimg2" src="{{ url_for('static', filename='images/vegi6.jpg')}}" alt="Healthy Plate" width="250" height="150">
+                            <img id="hmaimg2" src="{{ url_for('static', filename='images/vegi7.jpg')}}" alt="Healthy Plate" width="250" height="150">
+                            <img id="hmaimg2" src="{{ url_for('static', filename='images/vegi8.jpg')}}" alt="Healthy Plate" width="250" height="150">
+                            </div>
+                        </div>
+                </p>
+            </article>
+            <article>
+                <h4>Create your plate</h4>
+                <form id="set_plate" action="{{ url_for("add_to_plate")}}" method="POST">
+                    <input id="item" type="text" name="item" placeholder="Add vegetable to your plate">&nbsp;
+                    <button type="submit"> Add </button><br>
+                    <button type="submit"><a href="{{url_for('plate_list')}}">View plate</a></button>
+                </form>
+            </article>
+        </div>
     <script src="{{ url_for('static', filename='js/inputs.js')}}"></script>
     </div>
 {% endblock %}

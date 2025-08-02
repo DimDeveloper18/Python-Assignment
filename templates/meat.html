@@ -2,6 +2,7 @@
 {% block css %}
 <link href="{{ url_for('static', filename='css/inputs.css')}}" rel="stylesheet">
 <link href="{{ url_for('static', filename='css/asideroll.css')}}" rel="stylesheet">
+<link href="{{ url_for('static', filename='css/meat.css')}}" rel="stylesheet">
 {% endblock %}
 {% block main %}
     <div>
@@ -60,6 +61,14 @@
                 <output name="calories">{{ calories }}</output>
             </form>
         </p>
+    </article>
+    <article>
+        <h4>Create your plate</h4>
+        <form id="set_plate" action="{{ url_for("add_to_plate")}}" method="POST">
+            <input id="item" type="text" name="item" placeholder="Add meat to your plate">&nbsp;
+            <button type="submit"> Add </button><br>
+            <button type="submit"><a href="{{url_for('plate_list')}}">View plate</a></button>
+        </form>
     </article>
     <script src="{{ url_for('static', filename='js/mpinputs.js')}}"></script>
     </div>

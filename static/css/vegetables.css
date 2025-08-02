@@ -1,0 +1,35 @@
+@media screen and (min-width: 320px){
+
+    
+#artic_pics{
+    display: none;
+}
+aside{
+    display: flex;
+}
+
+}
+
+@media screen and (min-width: 768px) {
+
+#main_artic{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+#artic1{
+    display: flex;
+    flex-direction: column;
+}
+#form_sec{
+    display: flex;
+    justify-content: space-between;
+}
+#artic_pics{
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 250px;
+}
+}

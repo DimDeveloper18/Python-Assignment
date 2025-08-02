@@ -14,62 +14,71 @@
             Emu, Fish, Lobster, Crab, Prawn, Mussels, Scallops, Oysters, Clams.
         </p>
     </section>
-    <article>
-        <h2>A wide variety of meats, with great flavor.</h2>
-        <p>
-            <h3>What do you have today?</h3>
-            <form id="choose_form" method="POST">
-                <label for="piked-meat">Pick your meat</label>
-                <input type="text" name="meat" id="meat" list="meats" placeholder="Meats">
-                <datalist id="meats">
-                    <option value="Pork" label="Pork"></option>
-                    <option value="Beef" label="Beef"></option>
-                    <option value="Veal" label="Veal"></option>
-                    <option value="Mutton" label="Mutton"></option>
-                    <option value="Lamb" label="Lamb"></option>
-                    <option value="Goat Meat" label="Goat Meat"></option>
-                    <option value="Venison" label="Venison"></option>
-                    <option value="Bison Meat" label="Bison Meat"></option>
-                    <option value="Kangaroo Meat" label="Kangaroo Meat"></option>
-                    <option value="Game Meats" label="Game Meats"></option>
-                    <option value="Chicken" label="Chicken"></option>
-                    <option value="Duck" label="Duck"></option>
-                    <option value="Türkiye" label="Türkiye"></option>
-                    <option value="Goose" label="Goose"></option>
-                    <option value="Pheasant" label="Pheasant"></option>
-                    <option value="Emu" label="Emu"></option>
-                    <option value="Fish" label="Fish"></option>
-                    <option value="Lobster" label="Lobster"></option>
-                    <option value="Crab" label="Crab"></option>
-                    <option value="Prawn" label="Prawn"></option>
-                    <option value="Mussels" label="Mussels"></option>
-                    <option value="Scallops" label="Scallops"></option>
-                    <option value="Oysters" label="Oysters"></option>
-                    <option value="Clams" label="Clams"></option>
-                </datalist>&nbsp;
-                <label for="gramms_select">Select the amount</label>
-                <input type="text" name="gramm" id="meat_gramm" list="gramms" placeholder="Grams">
-                <datalist id="gramms">
-                    <option value="30" label="g"></option>
-                    <option value="50" label="g"></option>
-                    <option value="100" label="g"></option>
-                    <option value="150" label="g"></option>
-                    <option value="" label=""></option>
-                </datalist>&nbsp;
-                <input type="submit"/>&nbsp; <input type="reset"/>&nbsp;
-                <label for="meat_cal">Calories total</label>
-                <output name="calories">{{ calories }}</output>
-            </form>
-        </p>
-    </article>
-    <article>
-        <h4>Create your plate</h4>
-        <form id="set_plate" action="{{ url_for("add_to_plate")}}" method="POST">
-            <input id="item" type="text" name="item" placeholder="Add meat to your plate">&nbsp;
-            <button type="submit"> Add </button><br>
-            <button type="submit"><a href="{{url_for('plate_list')}}">View plate</a></button>
-        </form>
-    </article>
+        <div id="main_artic">
+            <article id="artic1">
+                <h2>A wide variety of meats, with great flavor.</h2>
+                <p>
+                    <h3>What do you have today?</h3>
+                    <div id="form_sec">
+                        <form id="choose_form" method="POST">
+                            <label for="piked-meat">Pick your meat</label>
+                            <input type="text" name="meat" id="meat" list="meats" placeholder="Meats">
+                            <datalist id="meats">
+                                <option value="Pork" label="Pork"></option>
+                                <option value="Beef" label="Beef"></option>
+                                <option value="Veal" label="Veal"></option>
+                                <option value="Mutton" label="Mutton"></option>
+                                <option value="Lamb" label="Lamb"></option>
+                                <option value="Goat Meat" label="Goat Meat"></option>
+                                <option value="Venison" label="Venison"></option>
+                                <option value="Bison Meat" label="Bison Meat"></option>
+                                <option value="Kangaroo Meat" label="Kangaroo Meat"></option>
+                                <option value="Game Meats" label="Game Meats"></option>
+                                <option value="Chicken" label="Chicken"></option>
+                                <option value="Duck" label="Duck"></option>
+                                <option value="Türkiye" label="Türkiye"></option>
+                                <option value="Goose" label="Goose"></option>
+                                <option value="Pheasant" label="Pheasant"></option>
+                                <option value="Emu" label="Emu"></option>
+                                <option value="Fish" label="Fish"></option>
+                                <option value="Lobster" label="Lobster"></option>
+                                <option value="Crab" label="Crab"></option>
+                                <option value="Prawn" label="Prawn"></option>
+                                <option value="Mussels" label="Mussels"></option>
+                                <option value="Scallops" label="Scallops"></option>
+                                <option value="Oysters" label="Oysters"></option>
+                                <option value="Clams" label="Clams"></option>
+                            </datalist>&nbsp;
+                            <label for="gramms_select">Select the amount</label>
+                            <input type="text" name="gramm" id="meat_gramm" list="gramms" placeholder="Grams">
+                            <datalist id="gramms">
+                                <option value="30" label="g"></option>
+                                <option value="50" label="g"></option>
+                                <option value="100" label="g"></option>
+                                <option value="150" label="g"></option>
+                                <option value="" label=""></option>
+                            </datalist>&nbsp;
+                            <input type="submit"/>&nbsp; <input type="reset"/>&nbsp;
+                            <label for="meat_cal">Calories total</label>
+                            <output name="calories">{{ calories }}</output>
+                        </form>
+                        <div id="artic_pics">
+                            <img id="hmaimg2" src="{{ url_for('static', filename='images/meat1.jpg')}}" alt="Healthy Plate" width="250" height="150">
+                            <img id="hmaimg2" src="{{ url_for('static', filename='images/meat4.jpg')}}" alt="Healthy Plate" width="250" height="150">
+                            <img id="hmaimg2" src="{{ url_for('static', filename='images/meat5.jpg')}}" alt="Healthy Plate" width="250" height="150">
+                        </div>
+                    </div>
+                </p>
+            </article>
+            <article>
+                <h4>Create your plate</h4>
+                <form id="set_plate" action="{{ url_for("add_to_plate")}}" method="POST">
+                    <input id="item" type="text" name="item" placeholder="Add meat to your plate">&nbsp;
+                    <button type="submit"> Add </button><br>
+                    <button type="submit"><a href="{{url_for('plate_list')}}">View plate</a></button>
+                </form>
+            </article>
+        </div>
     <script src="{{ url_for('static', filename='js/mpinputs.js')}}"></script>
     </div>
 {% endblock %}
